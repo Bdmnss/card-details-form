@@ -24,7 +24,7 @@ body {
     padding: 28px 32px 26.5px 32px;
     background-image: url(images/bg-card-front.png);
     background-repeat: no-repeat;
-    top: 20%;
+    top: 15%;
     left: 25%;
 }
 
@@ -43,6 +43,21 @@ body {
 .name-and-date-div {
     display: flex;
     justify-content: space-between;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.back-card-div {
+    position: absolute;
+    width: 447px;
+    background-image: url(images/bg-card-back.png);
+    background-repeat: no-repeat;
+    padding: 111px 50px 115px 0px;
+    text-align: right;
+    top: 60%;
+    left: 50%;
     color: white;
     font-size: 14px;
     letter-spacing: 2px;
