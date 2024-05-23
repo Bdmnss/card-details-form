@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Space Grotesk", sans-serif;
+    color: #21092f;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.cards-div {
+    position: relative;
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+}
+
+.front-card-div {
+    position: absolute;
+    width: 447px;
+    padding: 28px 32px 26.5px 32px;
+    background-image: url(images/bg-card-front.png);
+    background-repeat: no-repeat;
+    top: 20%;
+    left: 25%;
+}
+
+.card-logo-div {
+    margin-bottom: 64px;
+}
+
+#card-number {
+    margin-bottom: 25.5px;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 3.42px;
+    font-weight: 500;
+}
+
+.name-and-date-div {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
