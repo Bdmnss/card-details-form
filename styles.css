@@ -25,6 +25,7 @@ body {
 .cards-div {
     position: relative;
     background-image: url(images/bg-main-desktop.png);
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -75,12 +76,11 @@ body {
 }
 
 .form-div {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-start;
-    padding: 0px 0px 0px 350px;
+    align-items: flex-start;
+    margin: 0px 0px 0px 350px;
     text-align: left;
 }
 
@@ -112,13 +112,13 @@ label {
 
 #month-input, #year-input {
     width: 80px;
-    padding: 11px 32px 11px 16px;
+    padding: 11px 25px 11px 16px;
     margin-right: 10px;
 }
 
 #cvc-input {
     width: 191px;
-    padding: 11px 109px 11px 16px;
+    padding: 11px 75px 11px 16px;
 }
 
 .cvc-input-label {
@@ -147,4 +147,84 @@ label {
 #confirm-btn:hover {
     background-color: white;
     color: #21092f;
+}
+
+@media (max-width: 767px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-div {
+        background-image: url(images/bg-main-mobile.png);
+    }
+
+    .front-card-div {
+        width: 285px;
+        background-size: contain;
+        padding: 19px 20px 20px 19px;
+        top: 64%;
+        left: 4%;
+        z-index: 1;
+    }
+
+    .back-card-div {
+        width: 285px;
+        background-size: contain;
+        padding: 71px 35px 73px 0px;
+        top: 16%;
+        left: 19%;
+        font-size: 9px;
+        letter-spacing: 1.29px;
+    }
+
+    .card-logo {
+        width: 50px;
+        height: 30px;
+    }
+
+    .card-logo-div {
+        margin-bottom: 30px;
+    }
+    
+    #card-number {
+        margin-bottom: 17px;
+        font-size: 18px;
+        letter-spacing: 2.2px;
+    }
+    
+    .name-and-date-div {
+        font-size: 9px;
+        letter-spacing: 1.29px;
+    }
+
+    .form-div {
+        margin: 0px auto;
+    }
+
+    #cardholder-name-input, #card-number-input {
+        width: 327px;
+        margin-bottom: 20px;
+    }
+    
+    #month-input, #year-input {
+        width: 72px;
+        margin-right: 8px;
+    }
+
+    #cvc-input {
+        width: 159px;
+    }
+
+    .cvc-input-label {
+        margin-left: 27px;
+    }
+
+    .dates-input-div {
+        margin-bottom: 28px;
+    }
+    
+    #confirm-btn {
+        width: 328px;
+        padding: 15px 130px 15px 129px;
+    }
 }
