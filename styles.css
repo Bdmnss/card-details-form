@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::placeholder {
+    color: #dfdee0;
+}
+
 body {
     height: 100vh;
     font-family: "Space Grotesk", sans-serif;
@@ -62,4 +72,79 @@ body {
     font-size: 14px;
     letter-spacing: 2px;
     font-weight: 500;
+}
+
+.form-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 0px 0px 0px 350px;
+    text-align: left;
+}
+
+input:focus {
+    border: 1px solid #610595;
+    outline: none;
+}
+
+input {
+    color: #21092f;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: solid 1px #dfdee0;
+}
+
+#cardholder-name-input, #card-number-input {
+    width: 381px;
+    padding: 11px 16px 11px 16px;
+    margin-bottom: 26px;
+}
+
+label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 9px;
+}
+
+#month-input, #year-input {
+    width: 80px;
+    padding: 11px 32px 11px 16px;
+    margin-right: 10px;
+}
+
+#cvc-input {
+    width: 191px;
+    padding: 11px 109px 11px 16px;
+}
+
+.cvc-input-label {
+    margin-left: 47px;
+}
+
+.dates-labels-div {
+    margin-bottom: 9px;
+}
+
+.dates-input-div {
+    margin-bottom: 40px;
+}
+
+#confirm-btn {
+    width: 381px;
+    padding: 15px 156px 15px 157px;
+    border-radius: 8px;
+    background-color: #21092f;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid #21092f;
+}
+
+#confirm-btn:hover {
+    background-color: white;
+    color: #21092f;
 }
