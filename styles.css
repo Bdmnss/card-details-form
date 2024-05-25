@@ -107,6 +107,10 @@ input {
     margin-bottom: 26px;
 }
 
+.dates-div {
+    display: flex;
+}
+
 label {
     font-size: 12px;
     letter-spacing: 2px;
