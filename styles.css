@@ -14,6 +14,10 @@ input::-webkit-inner-spin-button {
     color: #dfdee0;
 }
 
+button {
+    cursor: pointer;
+}
+
 body {
     height: 100vh;
     font-family: "Space Grotesk", sans-serif;
@@ -133,7 +137,7 @@ label {
     margin-bottom: 40px;
 }
 
-#confirm-btn {
+button {
     width: 381px;
     padding: 15px 156px 15px 157px;
     border-radius: 8px;
@@ -144,9 +148,39 @@ label {
     border: 2px solid #21092f;
 }
 
-#confirm-btn:hover {
+button:hover {
     background-color: white;
     color: #21092f;
+}
+
+.thank-you-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.complete-img {
+    margin-bottom: 35px;
+}
+
+.thank-you-text {
+    font-size: 28px;
+    letter-spacing: 3.42px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.added-card-text {
+    font-size: 18px;
+    color: #8f8694;
+    font-weight: 500;
+    margin-bottom: 48px;
+}
+
+.closed {
+    display: none;
 }
 
 @media (max-width: 767px) {
@@ -197,7 +231,7 @@ label {
         letter-spacing: 1.29px;
     }
 
-    .form-div {
+    .form-div, .thank-you-div {
         margin: 0px auto;
     }
 
@@ -223,7 +257,7 @@ label {
         margin-bottom: 28px;
     }
     
-    #confirm-btn {
+    button {
         width: 328px;
         padding: 15px 130px 15px 129px;
     }
