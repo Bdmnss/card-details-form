@@ -30,7 +30,7 @@
         <p id="card-number">0000 0000 0000 0000</p>
         <div class="name-and-date-div">
           <p class="card-holder-name">JANE APPLESEED</p>
-          <p>00/00</p>
+          <p><span class="month">00</span>/<span class="year">00</span></p>
         </div>
       </div>
       <div class="back-card-div">
@@ -43,23 +43,25 @@
         type="text"
         id="cardholder-name-input"
         placeholder="e.g.Jane Appleseed"
+        required
       />
       <label for="card-number-input">CARD NUMBER</label>
       <input
         type="number"
         id="card-number-input"
         placeholder="e.g. 1234 5678 9123 0000"
+        required
       />
       <div class="dates-labels-div">
         <label for="month-input">EXP.DATE (MM/YY)</label>
         <label class="cvc-input-label" for="cvc-input">CVC</label>
       </div>
       <div class="dates-input-div">
-        <input type="number" id="month-input" placeholder="MM" />
-        <input type="number" id="year-input" placeholder="YY" />
-        <input type="number" id="cvc-input" placeholder="e.g. 123" />
+        <input type="number" id="month-input" placeholder="MM" required/>
+        <input type="number" id="year-input" placeholder="YY" required/>
+        <input type="number" id="cvc-input" placeholder="e.g. 123" required/>
       </div>
-      <button id="confirm-btn">Confirm</button>
+      <button type="submit" id="confirm-btn">Confirm</button>
     </div>
   </body>
 </html>
