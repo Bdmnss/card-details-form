@@ -4,6 +4,8 @@ const cardNumberInput = document.querySelector("#card-number-input");
 const cardNumber = document.querySelector("#card-number")
 const monthInput = document.querySelector("#month-input")
 const month = document.querySelector(".month")
+const yearInput = document.querySelector("#year-input")
+const year = document.querySelector(".year");
 
 cardHolderInput.addEventListener("input", e => {
     cardHolderName.textContent = e.target.value.toUpperCase();
@@ -32,5 +34,19 @@ monthInput.addEventListener("input", e => {
     month.textContent = inputValue;
     if(inputValue = "") {
         month.innerHTML = "00";
+    }
+})
+
+yearInput.addEventListener("input", e => {
+    let inputValue = e.target.value;
+    if(inputValue.length > 2) {
+        inputValue = inputValue.slice(0, 2)
+    }
+    if(Number(inputValue) == 0 || Number(inputValue) < 0) {
+        return;
+    }
+    year.textContent = inputValue;
+    if(inputValue = "") {
+        year.innerHTML = "00";
     }
 })
