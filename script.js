@@ -11,6 +11,7 @@ const cvc = document.querySelector(".cvc");
 const confirmBtn = document.querySelector("#confirm-btn");
 const formDiv = document.querySelector(".form-div");
 const thankYouDiv = document.querySelector(".thank-you-div");
+const continueBtn = document.querySelector(".continue-btn")
 
 cardHolderInput.addEventListener("input", (e) => {
   cardHolderName.textContent = e.target.value.toUpperCase();
@@ -33,13 +34,13 @@ monthInput.addEventListener("input", (e) => {
   if (inputValue.length > 2) {
     inputValue = inputValue.slice(0, 2);
   }
-  if (
-    Number(inputValue) > 12 ||
-    Number(inputValue) == 0 ||
-    Number(inputValue) < 0
-  ) {
-    return;
-  }
+  // if (
+  //   Number(inputValue) > 12 ||
+  //   Number(inputValue) == 0 ||
+  //   Number(inputValue) < 0
+  // ) {
+  //   return;
+  // }
   month.textContent = inputValue;
   if (inputValue == "") {
     month.innerHTML = "00";
@@ -51,9 +52,9 @@ yearInput.addEventListener("input", (e) => {
   if (inputValue.length > 2) {
     inputValue = inputValue.slice(0, 2);
   }
-  if (Number(inputValue) == 0 || Number(inputValue) < 0) {
-    return;
-  }
+  // if (Number(inputValue) == 0 || Number(inputValue) < 0) {
+  //   return;
+  // }
   year.textContent = inputValue;
   if (inputValue == "") {
     year.innerHTML = "00";
@@ -79,7 +80,22 @@ confirmBtn.addEventListener("click", () => {
     yearInput.value.length >= 2 &&
     cvcInput.value.length >= 3
   ) {
-    formDiv.classList = "closed";
+    formDiv.classList.add("closed");
     thankYouDiv.classList.remove("closed");
   }
 });
+
+continueBtn.addEventListener("click", () => {
+  formDiv.classList.remove("closed");
+  thankYouDiv.classList.add("closed");
+  cardHolderInput.value = "";
+  cardNumberInput.value = "";
+  monthInput.value = "";
+  yearInput.value = "";
+  cvcInput.value = "";
+  cardHolderName.innerHTML = "JANE APPLESEED";
+  cardNumber.innerHTML = "0000 0000 0000 0000";
+  month.innerHTML = "00";
+  year.innerHTML = "00";
+  cvc.innerHTML = "000";
+})
