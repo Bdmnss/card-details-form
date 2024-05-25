@@ -6,6 +6,8 @@ const monthInput = document.querySelector("#month-input")
 const month = document.querySelector(".month")
 const yearInput = document.querySelector("#year-input")
 const year = document.querySelector(".year");
+const cvcInput = document.querySelector("#cvc-input");
+const cvc = document.querySelector(".cvc");
 
 cardHolderInput.addEventListener("input", e => {
     cardHolderName.textContent = e.target.value.toUpperCase();
@@ -32,7 +34,7 @@ monthInput.addEventListener("input", e => {
         return;
     }
     month.textContent = inputValue;
-    if(inputValue = "") {
+    if(inputValue == "") {
         month.innerHTML = "00";
     }
 })
@@ -46,7 +48,18 @@ yearInput.addEventListener("input", e => {
         return;
     }
     year.textContent = inputValue;
-    if(inputValue = "") {
+    if(inputValue == "") {
         year.innerHTML = "00";
     }
 })
+
+cvcInput.addEventListener("input", e => {
+    let inputValue = e.target.value;
+    if(inputValue.length > 3) {
+        inputValue = inputValue.slice(0, 3);
+    }
+    cvc.textContent = inputValue;
+    if(inputValue == "") {
+        cvc.innerHTML = "000";
+    }
+}) 
